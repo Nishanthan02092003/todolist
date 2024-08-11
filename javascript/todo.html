@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+<h1>MAKE YOUR WISHES</h1>
+
+
+    <input id="input" style="height:30pxpx;font-size:20pt;"placeholder="Enter Your Wishes">
+<button id="btn" onclick="add()">ADD</button>
+<ul id="listcontainer">
+    <li>
+        <button  id="dell" onclick="deleteitem(event)">tap to remove</button>
+    </li>
+</ul>
+</div>
+
+</body>
+</html>
+<script>
+    var input=document.getElementById("input")
+    var btn=document.getElementById("btn")
+    var listcontainer=document.getElementById("listcontainer")
+    function add(){
+        var listitem=document.createElement("li")
+        listitem.innerHTML=input.value +    "<button id='indel' onclick='deleteitem(event)'>Delete</button>"
+        listcontainer.append(listitem)
+    }
+    function deleteitem(event){
+        var list=document.getElementById("listcontainer")
+        event.target.parentElement.remove()
+    
+    }
+    </script>
+    
+
+
+
+
